@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Title</title>
+<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/u.css">
+<style id="demo-style" media="screen">
+
+/*自动完成开始*/
+
+/*自动完成结束*/
+
+</style>
+</head>
+<body style="background-color: #eceff1;margin-left: 20px;width: calc(100% - 20px );">
+
+<!-- 自动完成开始 -->
+<h3>自动搜索</h3>
+                        <div class="u-autocomplete">
+                            <input id="test1" class="u-form-control" autocomplete="off" />
+                            <br/>
+                        </div>
+<!-- 自动完成结束 -->
+
+
+<script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
+<script src="http://design.yyuap.com/static/uui/latest/js/u.js"></script>
+<script src="http://design.yyuap.com/static/requirejs/require.debug.js"></script>
+<script>
+
+// 自动完成开始
+	var sourceValue = [
+		{
+			label : "C++",
+			value: "C++"
+		},
+		{
+			label : 'Java',
+			value: 'Java'
+		},
+		{
+			label : 'Python',
+			value: 'Python'
+		},
+		{
+			label : 'JavaScript',
+			value: 'JavaScript'
+		},
+		{
+			label : 'C#',
+			value: 'C#'
+		},
+		{
+			label : 'C',
+			value: 'C'
+		},
+		{
+			label : 'Jython',
+			value: 'Jython'
+		},
+		{
+			label : 'Html',
+			value: 'Html'
+		},
+		{
+			label : 'html',
+			value: 'html'
+		}
+	];
+
+	new u.Autocomplete({
+		el:'#test1',
+		source: sourceValue,
+		multiSelect: true,
+		select: function(item, ac){
+		}
+	});
+// 自动完成结束
+
+</script>
+</body>
+</html>
